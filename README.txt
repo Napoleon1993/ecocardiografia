@@ -1,0 +1,12 @@
+Taskul 1 
+	Rezolvarea taskului 1 se bazeaza in mare parte pe impartirea planului [a,b]*[c,d] in n dreptunghiuri sau patrate daca a=c si b=d . n este o variabila care retine cel mai mare patrat perfect mai mic sau egal cu numarul de puncte care este transmis functiei.Dupa ce am impartit segmentul [a,b] si [c,d] in n intervale am generat random in fiecare subinterval din intervalul [a,b] n puncte si in fiecare subinterval din intervalul [c,d] cate un punct.Astfel in fiecare patrat/dreptunghi din aria [a,b]*[c,d] contine cate un punct random . Daca N nu este patrat perfect inseamna ca ne vor mai ramane N-n^2 puncte negenerate.Am considerat ca aceste puncte se pot genera random in intervalul [a,b] , [c,d] deoarece minim 66% din puncte au fost generate pe subintervale.
+
+Taskul 2
+ 	In functia trapez am calculat intr-o variabila suma ariilor trapezelor.Aceasta suma reprezinta chiar aria suprafetei inchise.
+	In functia Monte_carlo am incadrat curba inchisa intr-un patrat cu latura egala cu maximul dintre :xmax-xmin si ymax-ymin.
+Apoi cat timp |(Nr_Puncte_interioare * Arie patrat/Nr_total_de_puncte) - (2*Nr_Puncte_interioare * Arie patrat/Nr_total_de_puncte)| este mai mare decat toleranta si Numarul de puncte este mai mic decat 2^10 am generat puncte pseudo-aleatoare uniforme si am identificat numarul de puncte din interiorul curbei inchise cu functia Exista_punct.Apoi am retinut in I aria curbei inchise in functie de Nr_puncte_interioare aria patratului si Nr_puncte_totale.
+
+Task 3
+	Functia Heart_read primeste ca parametru drumul catre folderul cu testele.Eu retin in variabila folder_curent folderul in care ma aflu pentru a ma putea intoarce dupa ce citesc datele din teste.Citesc manual datele din teste le retin intr-o matrice apoi extrag coloana 1 si o pun in X apoi coloana 2 o pun in Y si inaltimea o pun in h.In vectorii arie1 si arie2 retin ariile generate cu functiile trapez si monte_carlo pe diferite teste.
+In vectorii V1 si V2 retin volumele inimii calculate cu ajutorul ariei1 si ariei2.Deoarece sectiunile au arii diferite volumul dintre 2 sectiuni se poate obtine cu teorema trapezului,inaltimea aflandu-se facand diferenta dintre inaltimea ariei superioare si inaltimea ariei inferioare.
+	
